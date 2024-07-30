@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="bg-base-300">
+  <head>
+    <title>segment-video-demo</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body x-data="data">
+    <script src="./index.ts" type="module" defer></script>
+
+    <div>
+      <label>
+        <input type="checkbox" class="checkbox" x-model.boolean="blur">
+        Show Blur
+      </label>
+      <span x-show="blur" x-cloak>
+        <meter id="blurSlider" class="w-56" max="100"></meter>
+        <span id="blurText"></span>
+      </span>
+    </div>
+    <div>
+      <label>
+        <input type="checkbox" class="checkbox" x-model.boolean="segment">
+        Show Segmentation
+      </label>
+      <span x-show="segment" x-cloak>
+        <span class="badge badge-sm font-bold" style="background-color: rgb(255, 104, 0);">
+          Body Skin
+        </span>
+        <span class="badge badge-sm font-bold" style="background-color: rgb(255, 197, 0);">
+          Face Skin
+        </span>
+      </span>
+    </div>
+
+    <video id="video" autoplay playsinline></video>
+
+    <!-- <input type="file" accept="image/*" capture="user" /> -->
+  </body>
+</html>

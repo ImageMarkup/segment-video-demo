@@ -1,0 +1,34 @@
+{
+  "name": "segment-video-demo",
+  "private": true,
+  "license": "Apache-2.0",
+  "scripts": {
+    "start": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html"
+  },
+  "dependencies": {
+    "@mediapipe/tasks-vision": "0.10.14",
+    "alpinejs": "^3.14.1",
+    "inspector-bokeh": "1.2.0"
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.7",
+    "@types/alpinejs": "^3.13.10",
+    "@types/dom-mediacapture-transform": "^0.1.9",
+    "babel-eslint": "^10.1.0",
+    "daisyui": "^4.12.10",
+    "eslint": "^7.2.0",
+    "parcel": "^2.0.0",
+    "tailwindcss": "^3.4.7"
+  },
+  "postcss": {
+    "plugins": {
+      "tailwindcss": {}
+    }
+  },
+  "@parcel/transformer-css": {
+    "drafts": {
+      "nesting": true
+    }
+  }
+}
